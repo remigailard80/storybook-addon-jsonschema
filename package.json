@@ -9,10 +9,7 @@
     "JSON Schema",
     "Controls"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kickstartDS/storybook-addon-jsonschema"
-  },
+  "repository": "https://github.com/remigailard80/storybook-addon-jsonschema.git",
   "author": "Jonas Ulrich | ruhmesmeile GmbH",
   "license": "MIT",
   "main": "dist/cjs/index.js",

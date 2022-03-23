@@ -35,7 +35,7 @@ export const SchemaEditor: React.FC<SchemaEditorProps> = ({ schema }) => {
 
   const handleChange = (value: OnChangeParams[0]) => {
     try {
-      updateArgs(pack(JSON.parse(decomment(value))));
+      updateArgs(JSON.parse(decomment(value)));
     } catch (e) {}
   };
 
@@ -63,13 +63,15 @@ export const SchemaEditor: React.FC<SchemaEditorProps> = ({ schema }) => {
     <Editor
       height="97vh"
       defaultLanguage="json"
-      value={editorPreamble + "\n" + JSON.stringify(initialContent, null, 2)}
+      defaultValue={
+        editorPreamble + "\n" + JSON.stringify(initialContent, null, 2)
+      }
       path="a://b/example.json"
       theme="vs-dark"
       onValidate={handleEditorValidChange}
       saveViewState={false}
       onMount={handleEditorDidMount}
-      onChange={handleChange}
+      onChange={(value, ev) => handleChange(value)}
     />
   );
 };

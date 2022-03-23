@@ -40,7 +40,6 @@ const SchemaEditorContainerHeading = styled.h3`
 
 export const SchemaView: React.FC = () => {
   const schema = useParameter<JsonSchema>(PARAM_KEY, {});
-
   return (
     <SchemaContainer>
       <SchemaDocContainer>
